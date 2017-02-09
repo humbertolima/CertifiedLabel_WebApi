@@ -1,0 +1,1049 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="CityViewModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CECase">
+          <Key>
+            <PropertyRef Name="RecordID" />
+          </Key>
+          <Property Name="dateEntered" Type="datetime" />
+          <Property Name="EnteredBy" Type="varchar" MaxLength="15" />
+          <Property Name="CV_INSERT_IDENTITY" Type="int" />
+          <Property Name="ParentID" Type="int" />
+          <Property Name="RecordID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Address" Type="varchar" MaxLength="48" />
+          <Property Name="_TimeStamp" Type="timestamp" StoreGeneratedPattern="Computed" />
+          <Property Name="RequestType" Type="varchar" MaxLength="4" />
+          <Property Name="Folio" Type="varchar" MaxLength="15" />
+          <Property Name="TrackingNumber" Type="varchar" MaxLength="15" />
+          <Property Name="BLK2000ID" Type="varchar" MaxLength="10" />
+          <Property Name="CESECTID" Type="int" />
+          <Property Name="CEZNID" Type="int" />
+          <Property Name="dateReceived" Type="datetime" />
+          <Property Name="CaseNumber" Type="varchar" MaxLength="15" />
+          <Property Name="Type" Type="varchar" MaxLength="4" />
+          <Property Name="Priority" Type="varchar" MaxLength="4" />
+          <Property Name="NetID" Type="smallint" />
+          <Property Name="Location" Type="varchar" MaxLength="150" />
+          <Property Name="Source" Type="varchar" MaxLength="4" />
+          <Property Name="Status" Type="varchar" MaxLength="4" />
+          <Property Name="Inspector" Type="varchar" MaxLength="15" />
+          <Property Name="FlagROW" Type="bit" />
+          <Property Name="dateFirstInspection" Type="datetime" />
+          <Property Name="dateInspectorAssigned" Type="datetime" />
+          <Property Name="dateLastAction" Type="datetime" />
+          <Property Name="dateClosed" Type="datetime" />
+          <Property Name="SourceDetails" Type="varchar" MaxLength="50" />
+          <Property Name="ParentCase" Type="varchar" MaxLength="15" />
+          <Property Name="PerDiem" Type="money" />
+          <Property Name="FlagRepeat" Type="bit" />
+          <Property Name="Description" Type="text" />
+          <Property Name="YrlyLotProcessNumber" Type="int" />
+          <Property Name="dateService" Type="datetime" />
+          <Property Name="flagLegacy" Type="bit" />
+          <Property Name="dateComplianceDue" Type="datetime" />
+          <Property Name="dateInCompliance" Type="datetime" />
+          <Property Name="HistoricalCaseNumber" Type="varchar" MaxLength="15" />
+          <Property Name="RequestCategory" Type="varchar" MaxLength="8" />
+          <Property Name="datePerDiem" Type="datetime" />
+          <Property Name="TicketNumber" Type="varchar" MaxLength="6" />
+          <Property Name="ReferTo" Type="varchar" MaxLength="15" />
+          <Property Name="flagPerDiem" Type="bit" />
+          <Property Name="TypeChangeReason" Type="text" />
+          <Property Name="CSRProcessMessage" Type="varchar" MaxLength="200" />
+          <Property Name="flagCSRProcessOK" Type="varchar" MaxLength="1" />
+          <Property Name="flagCSRReady" Type="varchar" MaxLength="1" />
+          <Property Name="STUNIT" Type="varchar" MaxLength="6" />
+          <Property Name="STNUMBER" Type="int" />
+          <Property Name="STTYPE" Type="varchar" MaxLength="4" />
+          <Property Name="STNAME" Type="varchar" MaxLength="50" />
+          <Property Name="CustID" Type="int" />
+          <Property Name="flagNotGeoInspector" Type="bit" />
+          <Property Name="flagCertifyOK" Type="bit" />
+          <Property Name="Compare" Type="varchar" MaxLength="1" />
+          <Property Name="Division" Type="varchar" MaxLength="4" />
+          <Property Name="LawCaseNumber" Type="varchar" MaxLength="10" />
+          <Property Name="flagIsRegistered" Type="bit" />
+          <Property Name="flagLotIsRegistered" Type="bit" />
+          <Property Name="TotalYards" Type="int" />
+          <Property Name="NumberContainers" Type="int" />
+          <Property Name="HaulerCompany" Type="int" />
+          <Property Name="OldCustID" Type="int" />
+          <Property Name="FPBCUID" Type="varchar" MaxLength="12" />
+          <Property Name="BD4050ID" Type="varchar" MaxLength="12" />
+        </EntityType>
+        <EntityType Name="CELetter">
+          <Key>
+            <PropertyRef Name="RecordID" />
+          </Key>
+          <Property Name="CV_INSERT_IDENTITY" Type="int" />
+          <Property Name="Type" Type="varchar" MaxLength="4" />
+          <Property Name="RecordID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="_TimeStamp" Type="timestamp" StoreGeneratedPattern="Computed" />
+          <Property Name="CECaseID" Type="int" />
+          <Property Name="EnteredBy" Type="varchar" MaxLength="15" />
+          <Property Name="dateEntered" Type="datetime" />
+          <Property Name="Inspector" Type="varchar" MaxLength="15" />
+          <Property Name="flagShowViolations" Type="bit" />
+          <Property Name="ActionID" Type="int" />
+          <Property Name="flagAllowImages" Type="bit" />
+          <Property Name="PrintAdministrator" Type="varchar" MaxLength="15" />
+          <Property Name="flagDefaultRecipients" Type="bit" />
+          <Property Name="TrackingNumber" Type="varchar" MaxLength="15" />
+          <Property Name="CaseNumber" Type="varchar" MaxLength="15" />
+          <Property Name="InspectorComments" Type="text" />
+          <Property Name="flagPost" Type="bit" />
+          <Property Name="AllowPrintRole" Type="varchar" MaxLength="20" />
+          <Property Name="CaseSectorID" Type="int" />
+          <Property Name="flagCertified" Type="bit" />
+          <Property Name="flagHasLocalImages" Type="bit" />
+          <Property Name="CELienID" Type="int" />
+          <Property Name="NotaryComments" Type="varchar" MaxLength="50" />
+          <Property Name="datePosted" Type="datetime" />
+          <Property Name="NotarizedBy" Type="varchar" MaxLength="15" />
+          <Property Name="dateERecQueue" Type="datetime" />
+          <Property Name="eRecQueueCompleted" Type="bit" />
+          <Property Name="eRecQueueReady" Type="bit" />
+          <Property Name="dateERecQueueCompleted" Type="datetime" />
+          <Property Name="eRecStatus" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="CELetterRecipient">
+          <Key>
+            <PropertyRef Name="RecordID" />
+          </Key>
+          <Property Name="SignatureRight" Type="text" />
+          <Property Name="Body" Type="text" />
+          <Property Name="CELetterID" Type="int" />
+          <Property Name="SignatureLeft" Type="text" />
+          <Property Name="HeaderLeft" Type="text" />
+          <Property Name="HeaderRight" Type="text" />
+          <Property Name="CV_INSERT_IDENTITY" Type="int" />
+          <Property Name="Footer" Type="text" />
+          <Property Name="RecordID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="_TimeStamp" Type="timestamp" StoreGeneratedPattern="Computed" />
+          <Property Name="Name" Type="varchar" MaxLength="40" />
+          <Property Name="DatePrinted" Type="datetime" />
+          <Property Name="PrintStatus" Type="varchar" MaxLength="2" />
+          <Property Name="EnteredBy" Type="varchar" MaxLength="15" />
+          <Property Name="dateEntered" Type="datetime" />
+          <Property Name="dateReprinted" Type="datetime" />
+          <Property Name="DeliveryMethod" Type="varchar" MaxLength="4" />
+          <Property Name="flagReprint" Type="bit" />
+          <Property Name="InspectorNote" Type="text" />
+          <Property Name="CertifiedNumber" Type="varchar" MaxLength="26" />
+          <Property Name="BusinessName" Type="varchar" MaxLength="40" />
+          <Property Name="Fax" Type="varchar" MaxLength="10" />
+          <Property Name="Email" Type="varchar" MaxLength="80" />
+          <Property Name="Phone" Type="varchar" MaxLength="10" />
+          <Property Name="City" Type="varchar" MaxLength="40" />
+          <Property Name="Address1" Type="varchar" MaxLength="40" />
+          <Property Name="Zip" Type="varchar" MaxLength="10" />
+          <Property Name="Address2" Type="varchar" MaxLength="40" />
+          <Property Name="CEPropertyContactID" Type="int" />
+          <Property Name="Type" Type="varchar" MaxLength="4" />
+          <Property Name="dateGenerated" Type="datetime" />
+          <Property Name="DigitalSignatureLeft" Type="varchar" MaxLength="100" />
+          <Property Name="TransferredTo" Type="varchar" MaxLength="15" />
+          <Property Name="DateFieldPrint" Type="datetime" />
+          <Property Name="DateGreenCardReceived" Type="datetime" />
+          <Property Name="DigitalSignatureRight" Type="varchar" MaxLength="100" />
+          <Property Name="PDFFileName" Type="varchar" MaxLength="40" />
+          <Property Name="flagSignature" Type="varchar" MaxLength="1" />
+          <Property Name="dateCertifiedLabelGenerated" Type="datetime" />
+        </EntityType>
+        <EntityType Name="LookupCESectorsInfo">
+          <Key>
+            <PropertyRef Name="Code" />
+          </Key>
+          <Property Name="CESectorID" Type="int" />
+          <Property Name="Desc" Type="varchar" MaxLength="30" />
+          <Property Name="CESectorAddress" Type="varchar" MaxLength="50" />
+          <Property Name="CESectorPhone" Type="varchar" MaxLength="10" />
+          <Property Name="Code" Type="varchar" MaxLength="4" Nullable="false" />
+          <Property Name="_TimeStamp" Type="timestamp" StoreGeneratedPattern="Computed" />
+          <Property Name="DepartmentID" Type="varchar" MaxLength="4" />
+          <Property Name="SectorAddress" Type="varchar" MaxLength="50" />
+          <Property Name="SectorCity" Type="varchar" MaxLength="20" />
+          <Property Name="SectorState" Type="varchar" MaxLength="2" />
+          <Property Name="SectorZipCode" Type="varchar" MaxLength="5" />
+        </EntityType>
+        <EntityType Name="LookupEmployee">
+          <Key>
+            <PropertyRef Name="Code" />
+          </Key>
+          <Property Name="Desc" Type="varchar" MaxLength="30" />
+          <Property Name="Code" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="_TimeStamp" Type="timestamp" StoreGeneratedPattern="Computed" />
+          <Property Name="SignaturePath" Type="varchar" MaxLength="150" />
+          <Property Name="Email" Type="varchar" MaxLength="80" />
+          <Property Name="Title" Type="varchar" MaxLength="30" />
+          <Property Name="PhoneExt" Type="varchar" MaxLength="4" />
+          <Property Name="PhoneCell" Type="varchar" MaxLength="10" />
+          <Property Name="Phone" Type="varchar" MaxLength="10" />
+          <Property Name="PhoneFax" Type="varchar" MaxLength="10" />
+          <Property Name="Filter" Type="varchar" MaxLength="4" />
+          <Property Name="OfficeLocation" Type="smallint" />
+          <Property Name="flagActive" Type="bit" />
+          <Property Name="Position" Type="varchar" MaxLength="4" />
+          <Property Name="LetterAdmin" Type="varchar" MaxLength="15" />
+          <Property Name="Department" Type="varchar" MaxLength="4" />
+          <Property Name="HistCode" Type="varchar" MaxLength="15" />
+          <Property Name="CESECTID" Type="int" />
+          <Property Name="CSRCode" Type="varchar" MaxLength="20" />
+          <Property Name="Compare" Type="varchar" MaxLength="20" />
+          <Property Name="Division" Type="varchar" MaxLength="4" />
+          <Property Name="flagNotarizeSWTL" Type="bit" />
+          <Property Name="flagNotarizeNOV" Type="bit" />
+          <Property Name="NotarySignaturePath" Type="varchar" MaxLength="150" />
+          <Property Name="flagNotarizeTWL" Type="bit" />
+          <Property Name="flagNotarizeTAH" Type="bit" />
+          <Property Name="ExpiresDate" Type="datetime" />
+          <Property Name="flagNotarizeSWTS" Type="bit" />
+          <Property Name="flagNotarizeSUM" Type="bit" />
+          <Property Name="flagNotarizeTKT" Type="bit" />
+          <Property Name="flagNotarizeTSM" Type="bit" />
+          <Property Name="NotaryName" Type="varchar" MaxLength="30" />
+          <Property Name="flagNotarizeSWT" Type="bit" />
+          <Property Name="flagNotarizeLOT" Type="bit" />
+          <Property Name="CommissionNumber" Type="varchar" MaxLength="15" />
+          <Property Name="flagCertifyLC" Type="bit" />
+          <Property Name="flagCertifyCESW" Type="bit" />
+          <Property Name="flagCertifySWSW" Type="bit" />
+          <Property Name="flagClearTKT" Type="bit" />
+          <Property Name="flagClearCESW" Type="bit" />
+          <Property Name="flagCertifyTKT" Type="bit" />
+          <Property Name="flagClearSWSW" Type="bit" />
+          <Property Name="flagClearLC" Type="bit" />
+          <Property Name="flagClearNOV" Type="bit" />
+          <Property Name="flagCertifyNOV" Type="bit" />
+          <Property Name="flag4050" Type="bit" />
+        </EntityType>
+        <Association Name="CECaseCELetter">
+          <End Role="CECase" Type="Self.CECase" Multiplicity="0..1" />
+          <End Role="CELetter" Type="Self.CELetter" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CECase">
+              <PropertyRef Name="RecordID" />
+            </Principal>
+            <Dependent Role="CELetter">
+              <PropertyRef Name="CECaseID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="CELetterCELetterRecip">
+          <End Role="CELetter" Type="Self.CELetter" Multiplicity="0..1" />
+          <End Role="CELetterRecipient" Type="Self.CELetterRecipient" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CELetter">
+              <PropertyRef Name="RecordID" />
+            </Principal>
+            <Dependent Role="CELetterRecipient">
+              <PropertyRef Name="CELetterID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="luCECaseReferTo">
+          <End Role="LookupEmployee" Type="Self.LookupEmployee" Multiplicity="0..1" />
+          <End Role="CECase" Type="Self.CECase" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LookupEmployee">
+              <PropertyRef Name="Code" />
+            </Principal>
+            <Dependent Role="CECase">
+              <PropertyRef Name="ReferTo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="luEmployeeCECase_Insp">
+          <End Role="LookupEmployee" Type="Self.LookupEmployee" Multiplicity="0..1" />
+          <End Role="CECase" Type="Self.CECase" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LookupEmployee">
+              <PropertyRef Name="Code" />
+            </Principal>
+            <Dependent Role="CECase">
+              <PropertyRef Name="Inspector" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="LuEmployeeCELetter">
+          <End Role="LookupEmployee" Type="Self.LookupEmployee" Multiplicity="0..1" />
+          <End Role="CELetter" Type="Self.CELetter" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LookupEmployee">
+              <PropertyRef Name="Code" />
+            </Principal>
+            <Dependent Role="CELetter">
+              <PropertyRef Name="EnteredBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="LuEmployeeCELetterInspector">
+          <End Role="LookupEmployee" Type="Self.LookupEmployee" Multiplicity="0..1" />
+          <End Role="CELetter" Type="Self.CELetter" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LookupEmployee">
+              <PropertyRef Name="Code" />
+            </Principal>
+            <Dependent Role="CELetter">
+              <PropertyRef Name="Inspector" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="LuEmployeeCELetterNotaryEmp">
+          <End Role="LookupEmployee" Type="Self.LookupEmployee" Multiplicity="0..1" />
+          <End Role="CELetter" Type="Self.CELetter" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LookupEmployee">
+              <PropertyRef Name="Code" />
+            </Principal>
+            <Dependent Role="CELetter">
+              <PropertyRef Name="NotarizedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="LuEmployeeCELetterPrintAdmin">
+          <End Role="LookupEmployee" Type="Self.LookupEmployee" Multiplicity="0..1" />
+          <End Role="CELetter" Type="Self.CELetter" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LookupEmployee">
+              <PropertyRef Name="Code" />
+            </Principal>
+            <Dependent Role="CELetter">
+              <PropertyRef Name="PrintAdministrator" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="LuEmployeeCELettRecipEntBy">
+          <End Role="LookupEmployee" Type="Self.LookupEmployee" Multiplicity="0..1" />
+          <End Role="CELetterRecipient" Type="Self.CELetterRecipient" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LookupEmployee">
+              <PropertyRef Name="Code" />
+            </Principal>
+            <Dependent Role="CELetterRecipient">
+              <PropertyRef Name="EnteredBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="LuLettRecipCELettRecipTransTo">
+          <End Role="LookupEmployee" Type="Self.LookupEmployee" Multiplicity="0..1" />
+          <End Role="CELetterRecipient" Type="Self.CELetterRecipient" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LookupEmployee">
+              <PropertyRef Name="Code" />
+            </Principal>
+            <Dependent Role="CELetterRecipient">
+              <PropertyRef Name="TransferredTo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="CityViewModelStoreContainer">
+          <EntitySet Name="CECase" EntityType="Self.CECase" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CELetter" EntityType="Self.CELetter" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CELetterRecipient" EntityType="Self.CELetterRecipient" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LookupCESectorsInfo" EntityType="Self.LookupCESectorsInfo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LookupEmployee" EntityType="Self.LookupEmployee" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="CECaseCELetter" Association="Self.CECaseCELetter">
+            <End Role="CECase" EntitySet="CECase" />
+            <End Role="CELetter" EntitySet="CELetter" />
+          </AssociationSet>
+          <AssociationSet Name="CELetterCELetterRecip" Association="Self.CELetterCELetterRecip">
+            <End Role="CELetter" EntitySet="CELetter" />
+            <End Role="CELetterRecipient" EntitySet="CELetterRecipient" />
+          </AssociationSet>
+          <AssociationSet Name="luCECaseReferTo" Association="Self.luCECaseReferTo">
+            <End Role="LookupEmployee" EntitySet="LookupEmployee" />
+            <End Role="CECase" EntitySet="CECase" />
+          </AssociationSet>
+          <AssociationSet Name="luEmployeeCECase_Insp" Association="Self.luEmployeeCECase_Insp">
+            <End Role="LookupEmployee" EntitySet="LookupEmployee" />
+            <End Role="CECase" EntitySet="CECase" />
+          </AssociationSet>
+          <AssociationSet Name="LuEmployeeCELetter" Association="Self.LuEmployeeCELetter">
+            <End Role="LookupEmployee" EntitySet="LookupEmployee" />
+            <End Role="CELetter" EntitySet="CELetter" />
+          </AssociationSet>
+          <AssociationSet Name="LuEmployeeCELetterInspector" Association="Self.LuEmployeeCELetterInspector">
+            <End Role="LookupEmployee" EntitySet="LookupEmployee" />
+            <End Role="CELetter" EntitySet="CELetter" />
+          </AssociationSet>
+          <AssociationSet Name="LuEmployeeCELetterNotaryEmp" Association="Self.LuEmployeeCELetterNotaryEmp">
+            <End Role="LookupEmployee" EntitySet="LookupEmployee" />
+            <End Role="CELetter" EntitySet="CELetter" />
+          </AssociationSet>
+          <AssociationSet Name="LuEmployeeCELetterPrintAdmin" Association="Self.LuEmployeeCELetterPrintAdmin">
+            <End Role="LookupEmployee" EntitySet="LookupEmployee" />
+            <End Role="CELetter" EntitySet="CELetter" />
+          </AssociationSet>
+          <AssociationSet Name="LuEmployeeCELettRecipEntBy" Association="Self.LuEmployeeCELettRecipEntBy">
+            <End Role="LookupEmployee" EntitySet="LookupEmployee" />
+            <End Role="CELetterRecipient" EntitySet="CELetterRecipient" />
+          </AssociationSet>
+          <AssociationSet Name="LuLettRecipCELettRecipTransTo" Association="Self.LuLettRecipCELettRecipTransTo">
+            <End Role="LookupEmployee" EntitySet="LookupEmployee" />
+            <End Role="CELetterRecipient" EntitySet="CELetterRecipient" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CityViewModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="CECase">
+          <Key>
+            <PropertyRef Name="RecordID" />
+          </Key>
+          <Property Name="dateEntered" Type="DateTime" Precision="3" />
+          <Property Name="EnteredBy" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="CV_INSERT_IDENTITY" Type="Int32" />
+          <Property Name="ParentID" Type="Int32" />
+          <Property Name="RecordID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Address" Type="String" MaxLength="48" FixedLength="false" Unicode="false" />
+          <Property Name="C_TimeStamp" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="RequestType" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="Folio" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="TrackingNumber" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="BLK2000ID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="CESECTID" Type="Int32" />
+          <Property Name="CEZNID" Type="Int32" />
+          <Property Name="dateReceived" Type="DateTime" Precision="3" />
+          <Property Name="CaseNumber" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="Type" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="Priority" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="NetID" Type="Int16" />
+          <Property Name="Location" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Source" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="Status" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="Inspector" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="FlagROW" Type="Boolean" />
+          <Property Name="dateFirstInspection" Type="DateTime" Precision="3" />
+          <Property Name="dateInspectorAssigned" Type="DateTime" Precision="3" />
+          <Property Name="dateLastAction" Type="DateTime" Precision="3" />
+          <Property Name="dateClosed" Type="DateTime" Precision="3" />
+          <Property Name="SourceDetails" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ParentCase" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="PerDiem" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="FlagRepeat" Type="Boolean" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="YrlyLotProcessNumber" Type="Int32" />
+          <Property Name="dateService" Type="DateTime" Precision="3" />
+          <Property Name="flagLegacy" Type="Boolean" />
+          <Property Name="dateComplianceDue" Type="DateTime" Precision="3" />
+          <Property Name="dateInCompliance" Type="DateTime" Precision="3" />
+          <Property Name="HistoricalCaseNumber" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="RequestCategory" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="datePerDiem" Type="DateTime" Precision="3" />
+          <Property Name="TicketNumber" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="ReferTo" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="flagPerDiem" Type="Boolean" />
+          <Property Name="TypeChangeReason" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="CSRProcessMessage" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="flagCSRProcessOK" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="flagCSRReady" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="STUNIT" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="STNUMBER" Type="Int32" />
+          <Property Name="STTYPE" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="STNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CustID" Type="Int32" />
+          <Property Name="flagNotGeoInspector" Type="Boolean" />
+          <Property Name="flagCertifyOK" Type="Boolean" />
+          <Property Name="Compare" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="Division" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="LawCaseNumber" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="flagIsRegistered" Type="Boolean" />
+          <Property Name="flagLotIsRegistered" Type="Boolean" />
+          <Property Name="TotalYards" Type="Int32" />
+          <Property Name="NumberContainers" Type="Int32" />
+          <Property Name="HaulerCompany" Type="Int32" />
+          <Property Name="OldCustID" Type="Int32" />
+          <Property Name="FPBCUID" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="BD4050ID" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="CELetters" Relationship="Self.CECaseCELetter" FromRole="CECase" ToRole="CELetter" />
+          <NavigationProperty Name="LookupEmployee" Relationship="Self.luCECaseReferTo" FromRole="CECase" ToRole="LookupEmployee" />
+          <NavigationProperty Name="LookupEmployee1" Relationship="Self.luEmployeeCECase_Insp" FromRole="CECase" ToRole="LookupEmployee" />
+        </EntityType>
+        <EntityType Name="CELetter">
+          <Key>
+            <PropertyRef Name="RecordID" />
+          </Key>
+          <Property Name="CV_INSERT_IDENTITY" Type="Int32" />
+          <Property Name="Type" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="RecordID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="C_TimeStamp" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="CECaseID" Type="Int32" />
+          <Property Name="EnteredBy" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="dateEntered" Type="DateTime" Precision="3" />
+          <Property Name="Inspector" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="flagShowViolations" Type="Boolean" />
+          <Property Name="ActionID" Type="Int32" />
+          <Property Name="flagAllowImages" Type="Boolean" />
+          <Property Name="PrintAdministrator" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="flagDefaultRecipients" Type="Boolean" />
+          <Property Name="TrackingNumber" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="CaseNumber" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="InspectorComments" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="flagPost" Type="Boolean" />
+          <Property Name="AllowPrintRole" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CaseSectorID" Type="Int32" />
+          <Property Name="flagCertified" Type="Boolean" />
+          <Property Name="flagHasLocalImages" Type="Boolean" />
+          <Property Name="CELienID" Type="Int32" />
+          <Property Name="NotaryComments" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="datePosted" Type="DateTime" Precision="3" />
+          <Property Name="NotarizedBy" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="dateERecQueue" Type="DateTime" Precision="3" />
+          <Property Name="eRecQueueCompleted" Type="Boolean" />
+          <Property Name="eRecQueueReady" Type="Boolean" />
+          <Property Name="dateERecQueueCompleted" Type="DateTime" Precision="3" />
+          <Property Name="eRecStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="CECase" Relationship="Self.CECaseCELetter" FromRole="CELetter" ToRole="CECase" />
+          <NavigationProperty Name="CELetterRecipients" Relationship="Self.CELetterCELetterRecip" FromRole="CELetter" ToRole="CELetterRecipient" />
+          <NavigationProperty Name="LookupEmployee" Relationship="Self.LuEmployeeCELetter" FromRole="CELetter" ToRole="LookupEmployee" />
+          <NavigationProperty Name="LookupEmployee1" Relationship="Self.LuEmployeeCELetterInspector" FromRole="CELetter" ToRole="LookupEmployee" />
+          <NavigationProperty Name="LookupEmployee2" Relationship="Self.LuEmployeeCELetterNotaryEmp" FromRole="CELetter" ToRole="LookupEmployee" />
+          <NavigationProperty Name="LookupEmployee3" Relationship="Self.LuEmployeeCELetterPrintAdmin" FromRole="CELetter" ToRole="LookupEmployee" />
+        </EntityType>
+        <EntityType Name="CELetterRecipient">
+          <Key>
+            <PropertyRef Name="RecordID" />
+          </Key>
+          <Property Name="SignatureRight" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Body" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="CELetterID" Type="Int32" />
+          <Property Name="SignatureLeft" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="HeaderLeft" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="HeaderRight" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="CV_INSERT_IDENTITY" Type="Int32" />
+          <Property Name="Footer" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="RecordID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="C_TimeStamp" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="Name" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="DatePrinted" Type="DateTime" Precision="3" />
+          <Property Name="PrintStatus" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="EnteredBy" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="dateEntered" Type="DateTime" Precision="3" />
+          <Property Name="dateReprinted" Type="DateTime" Precision="3" />
+          <Property Name="DeliveryMethod" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="flagReprint" Type="Boolean" />
+          <Property Name="InspectorNote" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="CertifiedNumber" Type="String" MaxLength="26" FixedLength="false" Unicode="false" />
+          <Property Name="BusinessName" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="Fax" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="Phone" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="City" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="Address1" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="Zip" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Address2" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="CEPropertyContactID" Type="Int32" />
+          <Property Name="Type" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="dateGenerated" Type="DateTime" Precision="3" />
+          <Property Name="DigitalSignatureLeft" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="TransferredTo" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="DateFieldPrint" Type="DateTime" Precision="3" />
+          <Property Name="DateGreenCardReceived" Type="DateTime" Precision="3" />
+          <Property Name="DigitalSignatureRight" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="PDFFileName" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="flagSignature" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="dateCertifiedLabelGenerated" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="CELetter" Relationship="Self.CELetterCELetterRecip" FromRole="CELetterRecipient" ToRole="CELetter" />
+          <NavigationProperty Name="LookupEmployee" Relationship="Self.LuEmployeeCELettRecipEntBy" FromRole="CELetterRecipient" ToRole="LookupEmployee" />
+          <NavigationProperty Name="LookupEmployee1" Relationship="Self.LuLettRecipCELettRecipTransTo" FromRole="CELetterRecipient" ToRole="LookupEmployee" />
+        </EntityType>
+        <EntityType Name="LookupCESectorsInfo">
+          <Key>
+            <PropertyRef Name="Code" />
+          </Key>
+          <Property Name="CESectorID" Type="Int32" />
+          <Property Name="Desc" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="CESectorAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CESectorPhone" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Code" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="C_TimeStamp" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="DepartmentID" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="SectorAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SectorCity" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="SectorState" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="SectorZipCode" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="LookupEmployee">
+          <Key>
+            <PropertyRef Name="Code" />
+          </Key>
+          <Property Name="Desc" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Code" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="C_TimeStamp" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="SignaturePath" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="Title" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="PhoneExt" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="PhoneCell" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Phone" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="PhoneFax" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Filter" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="OfficeLocation" Type="Int16" />
+          <Property Name="flagActive" Type="Boolean" />
+          <Property Name="Position" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="LetterAdmin" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="Department" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="HistCode" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="CESECTID" Type="Int32" />
+          <Property Name="CSRCode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Compare" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Division" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="flagNotarizeSWTL" Type="Boolean" />
+          <Property Name="flagNotarizeNOV" Type="Boolean" />
+          <Property Name="NotarySignaturePath" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="flagNotarizeTWL" Type="Boolean" />
+          <Property Name="flagNotarizeTAH" Type="Boolean" />
+          <Property Name="ExpiresDate" Type="DateTime" Precision="3" />
+          <Property Name="flagNotarizeSWTS" Type="Boolean" />
+          <Property Name="flagNotarizeSUM" Type="Boolean" />
+          <Property Name="flagNotarizeTKT" Type="Boolean" />
+          <Property Name="flagNotarizeTSM" Type="Boolean" />
+          <Property Name="NotaryName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="flagNotarizeSWT" Type="Boolean" />
+          <Property Name="flagNotarizeLOT" Type="Boolean" />
+          <Property Name="CommissionNumber" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="flagCertifyLC" Type="Boolean" />
+          <Property Name="flagCertifyCESW" Type="Boolean" />
+          <Property Name="flagCertifySWSW" Type="Boolean" />
+          <Property Name="flagClearTKT" Type="Boolean" />
+          <Property Name="flagClearCESW" Type="Boolean" />
+          <Property Name="flagCertifyTKT" Type="Boolean" />
+          <Property Name="flagClearSWSW" Type="Boolean" />
+          <Property Name="flagClearLC" Type="Boolean" />
+          <Property Name="flagClearNOV" Type="Boolean" />
+          <Property Name="flagCertifyNOV" Type="Boolean" />
+          <Property Name="flag4050" Type="Boolean" />
+          <NavigationProperty Name="CECases" Relationship="Self.luCECaseReferTo" FromRole="LookupEmployee" ToRole="CECase" />
+          <NavigationProperty Name="CECases1" Relationship="Self.luEmployeeCECase_Insp" FromRole="LookupEmployee" ToRole="CECase" />
+          <NavigationProperty Name="CELetters" Relationship="Self.LuEmployeeCELetter" FromRole="LookupEmployee" ToRole="CELetter" />
+          <NavigationProperty Name="CELetters1" Relationship="Self.LuEmployeeCELetterInspector" FromRole="LookupEmployee" ToRole="CELetter" />
+          <NavigationProperty Name="CELetters2" Relationship="Self.LuEmployeeCELetterNotaryEmp" FromRole="LookupEmployee" ToRole="CELetter" />
+          <NavigationProperty Name="CELetters3" Relationship="Self.LuEmployeeCELetterPrintAdmin" FromRole="LookupEmployee" ToRole="CELetter" />
+          <NavigationProperty Name="CELetterRecipients" Relationship="Self.LuEmployeeCELettRecipEntBy" FromRole="LookupEmployee" ToRole="CELetterRecipient" />
+          <NavigationProperty Name="CELetterRecipients1" Relationship="Self.LuLettRecipCELettRecipTransTo" FromRole="LookupEmployee" ToRole="CELetterRecipient" />
+        </EntityType>
+        <Association Name="CECaseCELetter">
+          <End Role="CECase" Type="Self.CECase" Multiplicity="0..1" />
+          <End Role="CELetter" Type="Self.CELetter" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CECase">
+              <PropertyRef Name="RecordID" />
+            </Principal>
+            <Dependent Role="CELetter">
+              <PropertyRef Name="CECaseID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="luCECaseReferTo">
+          <End Role="LookupEmployee" Type="Self.LookupEmployee" Multiplicity="0..1" />
+          <End Role="CECase" Type="Self.CECase" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LookupEmployee">
+              <PropertyRef Name="Code" />
+            </Principal>
+            <Dependent Role="CECase">
+              <PropertyRef Name="ReferTo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="luEmployeeCECase_Insp">
+          <End Role="LookupEmployee" Type="Self.LookupEmployee" Multiplicity="0..1" />
+          <End Role="CECase" Type="Self.CECase" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LookupEmployee">
+              <PropertyRef Name="Code" />
+            </Principal>
+            <Dependent Role="CECase">
+              <PropertyRef Name="Inspector" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="CELetterCELetterRecip">
+          <End Role="CELetter" Type="Self.CELetter" Multiplicity="0..1" />
+          <End Role="CELetterRecipient" Type="Self.CELetterRecipient" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CELetter">
+              <PropertyRef Name="RecordID" />
+            </Principal>
+            <Dependent Role="CELetterRecipient">
+              <PropertyRef Name="CELetterID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="LuEmployeeCELetter">
+          <End Role="LookupEmployee" Type="Self.LookupEmployee" Multiplicity="0..1" />
+          <End Role="CELetter" Type="Self.CELetter" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LookupEmployee">
+              <PropertyRef Name="Code" />
+            </Principal>
+            <Dependent Role="CELetter">
+              <PropertyRef Name="EnteredBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="LuEmployeeCELetterInspector">
+          <End Role="LookupEmployee" Type="Self.LookupEmployee" Multiplicity="0..1" />
+          <End Role="CELetter" Type="Self.CELetter" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LookupEmployee">
+              <PropertyRef Name="Code" />
+            </Principal>
+            <Dependent Role="CELetter">
+              <PropertyRef Name="Inspector" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="LuEmployeeCELetterNotaryEmp">
+          <End Role="LookupEmployee" Type="Self.LookupEmployee" Multiplicity="0..1" />
+          <End Role="CELetter" Type="Self.CELetter" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LookupEmployee">
+              <PropertyRef Name="Code" />
+            </Principal>
+            <Dependent Role="CELetter">
+              <PropertyRef Name="NotarizedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="LuEmployeeCELetterPrintAdmin">
+          <End Role="LookupEmployee" Type="Self.LookupEmployee" Multiplicity="0..1" />
+          <End Role="CELetter" Type="Self.CELetter" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LookupEmployee">
+              <PropertyRef Name="Code" />
+            </Principal>
+            <Dependent Role="CELetter">
+              <PropertyRef Name="PrintAdministrator" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="LuEmployeeCELettRecipEntBy">
+          <End Role="LookupEmployee" Type="Self.LookupEmployee" Multiplicity="0..1" />
+          <End Role="CELetterRecipient" Type="Self.CELetterRecipient" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LookupEmployee">
+              <PropertyRef Name="Code" />
+            </Principal>
+            <Dependent Role="CELetterRecipient">
+              <PropertyRef Name="EnteredBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="LuLettRecipCELettRecipTransTo">
+          <End Role="LookupEmployee" Type="Self.LookupEmployee" Multiplicity="0..1" />
+          <End Role="CELetterRecipient" Type="Self.CELetterRecipient" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LookupEmployee">
+              <PropertyRef Name="Code" />
+            </Principal>
+            <Dependent Role="CELetterRecipient">
+              <PropertyRef Name="TransferredTo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="CityViewEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CECases" EntityType="Self.CECase" />
+          <EntitySet Name="CELetters" EntityType="Self.CELetter" />
+          <EntitySet Name="CELetterRecipients" EntityType="Self.CELetterRecipient" />
+          <EntitySet Name="LookupCESectorsInfoes" EntityType="Self.LookupCESectorsInfo" />
+          <EntitySet Name="LookupEmployees" EntityType="Self.LookupEmployee" />
+          <AssociationSet Name="CECaseCELetter" Association="Self.CECaseCELetter">
+            <End Role="CECase" EntitySet="CECases" />
+            <End Role="CELetter" EntitySet="CELetters" />
+          </AssociationSet>
+          <AssociationSet Name="luCECaseReferTo" Association="Self.luCECaseReferTo">
+            <End Role="LookupEmployee" EntitySet="LookupEmployees" />
+            <End Role="CECase" EntitySet="CECases" />
+          </AssociationSet>
+          <AssociationSet Name="luEmployeeCECase_Insp" Association="Self.luEmployeeCECase_Insp">
+            <End Role="LookupEmployee" EntitySet="LookupEmployees" />
+            <End Role="CECase" EntitySet="CECases" />
+          </AssociationSet>
+          <AssociationSet Name="CELetterCELetterRecip" Association="Self.CELetterCELetterRecip">
+            <End Role="CELetter" EntitySet="CELetters" />
+            <End Role="CELetterRecipient" EntitySet="CELetterRecipients" />
+          </AssociationSet>
+          <AssociationSet Name="LuEmployeeCELetter" Association="Self.LuEmployeeCELetter">
+            <End Role="LookupEmployee" EntitySet="LookupEmployees" />
+            <End Role="CELetter" EntitySet="CELetters" />
+          </AssociationSet>
+          <AssociationSet Name="LuEmployeeCELetterInspector" Association="Self.LuEmployeeCELetterInspector">
+            <End Role="LookupEmployee" EntitySet="LookupEmployees" />
+            <End Role="CELetter" EntitySet="CELetters" />
+          </AssociationSet>
+          <AssociationSet Name="LuEmployeeCELetterNotaryEmp" Association="Self.LuEmployeeCELetterNotaryEmp">
+            <End Role="LookupEmployee" EntitySet="LookupEmployees" />
+            <End Role="CELetter" EntitySet="CELetters" />
+          </AssociationSet>
+          <AssociationSet Name="LuEmployeeCELetterPrintAdmin" Association="Self.LuEmployeeCELetterPrintAdmin">
+            <End Role="LookupEmployee" EntitySet="LookupEmployees" />
+            <End Role="CELetter" EntitySet="CELetters" />
+          </AssociationSet>
+          <AssociationSet Name="LuEmployeeCELettRecipEntBy" Association="Self.LuEmployeeCELettRecipEntBy">
+            <End Role="LookupEmployee" EntitySet="LookupEmployees" />
+            <End Role="CELetterRecipient" EntitySet="CELetterRecipients" />
+          </AssociationSet>
+          <AssociationSet Name="LuLettRecipCELettRecipTransTo" Association="Self.LuLettRecipCELettRecipTransTo">
+            <End Role="LookupEmployee" EntitySet="LookupEmployees" />
+            <End Role="CELetterRecipient" EntitySet="CELetterRecipients" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CityViewModelStoreContainer" CdmEntityContainer="CityViewEntities1">
+          <EntitySetMapping Name="CECases">
+            <EntityTypeMapping TypeName="CityViewModel.CECase">
+              <MappingFragment StoreEntitySet="CECase">
+                <ScalarProperty Name="dateEntered" ColumnName="dateEntered" />
+                <ScalarProperty Name="EnteredBy" ColumnName="EnteredBy" />
+                <ScalarProperty Name="CV_INSERT_IDENTITY" ColumnName="CV_INSERT_IDENTITY" />
+                <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+                <ScalarProperty Name="RecordID" ColumnName="RecordID" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="C_TimeStamp" ColumnName="_TimeStamp" />
+                <ScalarProperty Name="RequestType" ColumnName="RequestType" />
+                <ScalarProperty Name="Folio" ColumnName="Folio" />
+                <ScalarProperty Name="TrackingNumber" ColumnName="TrackingNumber" />
+                <ScalarProperty Name="BLK2000ID" ColumnName="BLK2000ID" />
+                <ScalarProperty Name="CESECTID" ColumnName="CESECTID" />
+                <ScalarProperty Name="CEZNID" ColumnName="CEZNID" />
+                <ScalarProperty Name="dateReceived" ColumnName="dateReceived" />
+                <ScalarProperty Name="CaseNumber" ColumnName="CaseNumber" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Priority" ColumnName="Priority" />
+                <ScalarProperty Name="NetID" ColumnName="NetID" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="Source" ColumnName="Source" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Inspector" ColumnName="Inspector" />
+                <ScalarProperty Name="FlagROW" ColumnName="FlagROW" />
+                <ScalarProperty Name="dateFirstInspection" ColumnName="dateFirstInspection" />
+                <ScalarProperty Name="dateInspectorAssigned" ColumnName="dateInspectorAssigned" />
+                <ScalarProperty Name="dateLastAction" ColumnName="dateLastAction" />
+                <ScalarProperty Name="dateClosed" ColumnName="dateClosed" />
+                <ScalarProperty Name="SourceDetails" ColumnName="SourceDetails" />
+                <ScalarProperty Name="ParentCase" ColumnName="ParentCase" />
+                <ScalarProperty Name="PerDiem" ColumnName="PerDiem" />
+                <ScalarProperty Name="FlagRepeat" ColumnName="FlagRepeat" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="YrlyLotProcessNumber" ColumnName="YrlyLotProcessNumber" />
+                <ScalarProperty Name="dateService" ColumnName="dateService" />
+                <ScalarProperty Name="flagLegacy" ColumnName="flagLegacy" />
+                <ScalarProperty Name="dateComplianceDue" ColumnName="dateComplianceDue" />
+                <ScalarProperty Name="dateInCompliance" ColumnName="dateInCompliance" />
+                <ScalarProperty Name="HistoricalCaseNumber" ColumnName="HistoricalCaseNumber" />
+                <ScalarProperty Name="RequestCategory" ColumnName="RequestCategory" />
+                <ScalarProperty Name="datePerDiem" ColumnName="datePerDiem" />
+                <ScalarProperty Name="TicketNumber" ColumnName="TicketNumber" />
+                <ScalarProperty Name="ReferTo" ColumnName="ReferTo" />
+                <ScalarProperty Name="flagPerDiem" ColumnName="flagPerDiem" />
+                <ScalarProperty Name="TypeChangeReason" ColumnName="TypeChangeReason" />
+                <ScalarProperty Name="CSRProcessMessage" ColumnName="CSRProcessMessage" />
+                <ScalarProperty Name="flagCSRProcessOK" ColumnName="flagCSRProcessOK" />
+                <ScalarProperty Name="flagCSRReady" ColumnName="flagCSRReady" />
+                <ScalarProperty Name="STUNIT" ColumnName="STUNIT" />
+                <ScalarProperty Name="STNUMBER" ColumnName="STNUMBER" />
+                <ScalarProperty Name="STTYPE" ColumnName="STTYPE" />
+                <ScalarProperty Name="STNAME" ColumnName="STNAME" />
+                <ScalarProperty Name="CustID" ColumnName="CustID" />
+                <ScalarProperty Name="flagNotGeoInspector" ColumnName="flagNotGeoInspector" />
+                <ScalarProperty Name="flagCertifyOK" ColumnName="flagCertifyOK" />
+                <ScalarProperty Name="Compare" ColumnName="Compare" />
+                <ScalarProperty Name="Division" ColumnName="Division" />
+                <ScalarProperty Name="LawCaseNumber" ColumnName="LawCaseNumber" />
+                <ScalarProperty Name="flagIsRegistered" ColumnName="flagIsRegistered" />
+                <ScalarProperty Name="flagLotIsRegistered" ColumnName="flagLotIsRegistered" />
+                <ScalarProperty Name="TotalYards" ColumnName="TotalYards" />
+                <ScalarProperty Name="NumberContainers" ColumnName="NumberContainers" />
+                <ScalarProperty Name="HaulerCompany" ColumnName="HaulerCompany" />
+                <ScalarProperty Name="OldCustID" ColumnName="OldCustID" />
+                <ScalarProperty Name="FPBCUID" ColumnName="FPBCUID" />
+                <ScalarProperty Name="BD4050ID" ColumnName="BD4050ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CELetters">
+            <EntityTypeMapping TypeName="CityViewModel.CELetter">
+              <MappingFragment StoreEntitySet="CELetter">
+                <ScalarProperty Name="CV_INSERT_IDENTITY" ColumnName="CV_INSERT_IDENTITY" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="RecordID" ColumnName="RecordID" />
+                <ScalarProperty Name="C_TimeStamp" ColumnName="_TimeStamp" />
+                <ScalarProperty Name="CECaseID" ColumnName="CECaseID" />
+                <ScalarProperty Name="EnteredBy" ColumnName="EnteredBy" />
+                <ScalarProperty Name="dateEntered" ColumnName="dateEntered" />
+                <ScalarProperty Name="Inspector" ColumnName="Inspector" />
+                <ScalarProperty Name="flagShowViolations" ColumnName="flagShowViolations" />
+                <ScalarProperty Name="ActionID" ColumnName="ActionID" />
+                <ScalarProperty Name="flagAllowImages" ColumnName="flagAllowImages" />
+                <ScalarProperty Name="PrintAdministrator" ColumnName="PrintAdministrator" />
+                <ScalarProperty Name="flagDefaultRecipients" ColumnName="flagDefaultRecipients" />
+                <ScalarProperty Name="TrackingNumber" ColumnName="TrackingNumber" />
+                <ScalarProperty Name="CaseNumber" ColumnName="CaseNumber" />
+                <ScalarProperty Name="InspectorComments" ColumnName="InspectorComments" />
+                <ScalarProperty Name="flagPost" ColumnName="flagPost" />
+                <ScalarProperty Name="AllowPrintRole" ColumnName="AllowPrintRole" />
+                <ScalarProperty Name="CaseSectorID" ColumnName="CaseSectorID" />
+                <ScalarProperty Name="flagCertified" ColumnName="flagCertified" />
+                <ScalarProperty Name="flagHasLocalImages" ColumnName="flagHasLocalImages" />
+                <ScalarProperty Name="CELienID" ColumnName="CELienID" />
+                <ScalarProperty Name="NotaryComments" ColumnName="NotaryComments" />
+                <ScalarProperty Name="datePosted" ColumnName="datePosted" />
+                <ScalarProperty Name="NotarizedBy" ColumnName="NotarizedBy" />
+                <ScalarProperty Name="dateERecQueue" ColumnName="dateERecQueue" />
+                <ScalarProperty Name="eRecQueueCompleted" ColumnName="eRecQueueCompleted" />
+                <ScalarProperty Name="eRecQueueReady" ColumnName="eRecQueueReady" />
+                <ScalarProperty Name="dateERecQueueCompleted" ColumnName="dateERecQueueCompleted" />
+                <ScalarProperty Name="eRecStatus" ColumnName="eRecStatus" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CELetterRecipients">
+            <EntityTypeMapping TypeName="CityViewModel.CELetterRecipient">
+              <MappingFragment StoreEntitySet="CELetterRecipient">
+                <ScalarProperty Name="SignatureRight" ColumnName="SignatureRight" />
+                <ScalarProperty Name="Body" ColumnName="Body" />
+                <ScalarProperty Name="CELetterID" ColumnName="CELetterID" />
+                <ScalarProperty Name="SignatureLeft" ColumnName="SignatureLeft" />
+                <ScalarProperty Name="HeaderLeft" ColumnName="HeaderLeft" />
+                <ScalarProperty Name="HeaderRight" ColumnName="HeaderRight" />
+                <ScalarProperty Name="CV_INSERT_IDENTITY" ColumnName="CV_INSERT_IDENTITY" />
+                <ScalarProperty Name="Footer" ColumnName="Footer" />
+                <ScalarProperty Name="RecordID" ColumnName="RecordID" />
+                <ScalarProperty Name="C_TimeStamp" ColumnName="_TimeStamp" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="DatePrinted" ColumnName="DatePrinted" />
+                <ScalarProperty Name="PrintStatus" ColumnName="PrintStatus" />
+                <ScalarProperty Name="EnteredBy" ColumnName="EnteredBy" />
+                <ScalarProperty Name="dateEntered" ColumnName="dateEntered" />
+                <ScalarProperty Name="dateReprinted" ColumnName="dateReprinted" />
+                <ScalarProperty Name="DeliveryMethod" ColumnName="DeliveryMethod" />
+                <ScalarProperty Name="flagReprint" ColumnName="flagReprint" />
+                <ScalarProperty Name="InspectorNote" ColumnName="InspectorNote" />
+                <ScalarProperty Name="CertifiedNumber" ColumnName="CertifiedNumber" />
+                <ScalarProperty Name="BusinessName" ColumnName="BusinessName" />
+                <ScalarProperty Name="Fax" ColumnName="Fax" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Address1" ColumnName="Address1" />
+                <ScalarProperty Name="Zip" ColumnName="Zip" />
+                <ScalarProperty Name="Address2" ColumnName="Address2" />
+                <ScalarProperty Name="CEPropertyContactID" ColumnName="CEPropertyContactID" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="dateGenerated" ColumnName="dateGenerated" />
+                <ScalarProperty Name="DigitalSignatureLeft" ColumnName="DigitalSignatureLeft" />
+                <ScalarProperty Name="TransferredTo" ColumnName="TransferredTo" />
+                <ScalarProperty Name="DateFieldPrint" ColumnName="DateFieldPrint" />
+                <ScalarProperty Name="DateGreenCardReceived" ColumnName="DateGreenCardReceived" />
+                <ScalarProperty Name="DigitalSignatureRight" ColumnName="DigitalSignatureRight" />
+                <ScalarProperty Name="PDFFileName" ColumnName="PDFFileName" />
+                <ScalarProperty Name="flagSignature" ColumnName="flagSignature" />
+                <ScalarProperty Name="dateCertifiedLabelGenerated" ColumnName="dateCertifiedLabelGenerated" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LookupCESectorsInfoes">
+            <EntityTypeMapping TypeName="CityViewModel.LookupCESectorsInfo">
+              <MappingFragment StoreEntitySet="LookupCESectorsInfo">
+                <ScalarProperty Name="CESectorID" ColumnName="CESectorID" />
+                <ScalarProperty Name="Desc" ColumnName="Desc" />
+                <ScalarProperty Name="CESectorAddress" ColumnName="CESectorAddress" />
+                <ScalarProperty Name="CESectorPhone" ColumnName="CESectorPhone" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="C_TimeStamp" ColumnName="_TimeStamp" />
+                <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
+                <ScalarProperty Name="SectorAddress" ColumnName="SectorAddress" />
+                <ScalarProperty Name="SectorCity" ColumnName="SectorCity" />
+                <ScalarProperty Name="SectorState" ColumnName="SectorState" />
+                <ScalarProperty Name="SectorZipCode" ColumnName="SectorZipCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LookupEmployees">
+            <EntityTypeMapping TypeName="CityViewModel.LookupEmployee">
+              <MappingFragment StoreEntitySet="LookupEmployee">
+                <ScalarProperty Name="Desc" ColumnName="Desc" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="C_TimeStamp" ColumnName="_TimeStamp" />
+                <ScalarProperty Name="SignaturePath" ColumnName="SignaturePath" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="PhoneExt" ColumnName="PhoneExt" />
+                <ScalarProperty Name="PhoneCell" ColumnName="PhoneCell" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="PhoneFax" ColumnName="PhoneFax" />
+                <ScalarProperty Name="Filter" ColumnName="Filter" />
+                <ScalarProperty Name="OfficeLocation" ColumnName="OfficeLocation" />
+                <ScalarProperty Name="flagActive" ColumnName="flagActive" />
+                <ScalarProperty Name="Position" ColumnName="Position" />
+                <ScalarProperty Name="LetterAdmin" ColumnName="LetterAdmin" />
+                <ScalarProperty Name="Department" ColumnName="Department" />
+                <ScalarProperty Name="HistCode" ColumnName="HistCode" />
+                <ScalarProperty Name="CESECTID" ColumnName="CESECTID" />
+                <ScalarProperty Name="CSRCode" ColumnName="CSRCode" />
+                <ScalarProperty Name="Compare" ColumnName="Compare" />
+                <ScalarProperty Name="Division" ColumnName="Division" />
+                <ScalarProperty Name="flagNotarizeSWTL" ColumnName="flagNotarizeSWTL" />
+                <ScalarProperty Name="flagNotarizeNOV" ColumnName="flagNotarizeNOV" />
+                <ScalarProperty Name="NotarySignaturePath" ColumnName="NotarySignaturePath" />
+                <ScalarProperty Name="flagNotarizeTWL" ColumnName="flagNotarizeTWL" />
+                <ScalarProperty Name="flagNotarizeTAH" ColumnName="flagNotarizeTAH" />
+                <ScalarProperty Name="ExpiresDate" ColumnName="ExpiresDate" />
+                <ScalarProperty Name="flagNotarizeSWTS" ColumnName="flagNotarizeSWTS" />
+                <ScalarProperty Name="flagNotarizeSUM" ColumnName="flagNotarizeSUM" />
+                <ScalarProperty Name="flagNotarizeTKT" ColumnName="flagNotarizeTKT" />
+                <ScalarProperty Name="flagNotarizeTSM" ColumnName="flagNotarizeTSM" />
+                <ScalarProperty Name="NotaryName" ColumnName="NotaryName" />
+                <ScalarProperty Name="flagNotarizeSWT" ColumnName="flagNotarizeSWT" />
+                <ScalarProperty Name="flagNotarizeLOT" ColumnName="flagNotarizeLOT" />
+                <ScalarProperty Name="CommissionNumber" ColumnName="CommissionNumber" />
+                <ScalarProperty Name="flagCertifyLC" ColumnName="flagCertifyLC" />
+                <ScalarProperty Name="flagCertifyCESW" ColumnName="flagCertifyCESW" />
+                <ScalarProperty Name="flagCertifySWSW" ColumnName="flagCertifySWSW" />
+                <ScalarProperty Name="flagClearTKT" ColumnName="flagClearTKT" />
+                <ScalarProperty Name="flagClearCESW" ColumnName="flagClearCESW" />
+                <ScalarProperty Name="flagCertifyTKT" ColumnName="flagCertifyTKT" />
+                <ScalarProperty Name="flagClearSWSW" ColumnName="flagClearSWSW" />
+                <ScalarProperty Name="flagClearLC" ColumnName="flagClearLC" />
+                <ScalarProperty Name="flagClearNOV" ColumnName="flagClearNOV" />
+                <ScalarProperty Name="flagCertifyNOV" ColumnName="flagCertifyNOV" />
+                <ScalarProperty Name="flag4050" ColumnName="flag4050" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

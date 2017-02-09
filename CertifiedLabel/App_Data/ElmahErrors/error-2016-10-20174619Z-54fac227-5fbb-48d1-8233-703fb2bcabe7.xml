@@ -1,0 +1,210 @@
+﻿<error errorId="54fac227-5fbb-48d1-8233-703fb2bcabe7" application="/LM/W3SVC/3/ROOT" host="R05T6206" type="System.InvalidOperationException" message="The function import 'CityViewEntities.SearchSignatures' cannot be executed because it is not mapped to a store function." source="EntityFramework" detail="System.Data.Entity.Core.EntityCommandCompilationException: An error occurred while preparing the command definition. See the inner exception for details. ---&gt; System.InvalidOperationException: The function import 'CityViewEntities.SearchSignatures' cannot be executed because it is not mapped to a store function.&#xD;&#xA;   at System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.GetTargetFunctionMapping(DbFunctionCommandTree functionCommandTree)&#xD;&#xA;   at System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition..ctor(DbProviderFactory storeProviderFactory, DbCommandTree commandTree, DbInterceptionContext interceptionContext, IDbDependencyResolver resolver, BridgeDataReaderFactory bridgeDataReaderFactory, ColumnMapFactory columnMapFactory)&#xD;&#xA;   --- End of inner exception stack trace ---&#xD;&#xA;   at System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition..ctor(DbProviderFactory storeProviderFactory, DbCommandTree commandTree, DbInterceptionContext interceptionContext, IDbDependencyResolver resolver, BridgeDataReaderFactory bridgeDataReaderFactory, ColumnMapFactory columnMapFactory)&#xD;&#xA;   at System.Data.Entity.Core.EntityClient.EntityCommand.CreateCommandDefinition()&#xD;&#xA;   at System.Data.Entity.Core.EntityClient.EntityCommand.TryGetEntityCommandDefinitionFromQueryCache(EntityCommandDefinition&amp; entityCommandDefinition)&#xD;&#xA;   at System.Data.Entity.Core.EntityClient.EntityCommand.GetCommandDefinition()&#xD;&#xA;   at System.Data.Entity.Core.Objects.ObjectContext.CreateFunctionObjectResult[TElement](EntityCommand entityCommand, ReadOnlyCollection`1 entitySets, EdmType[] edmTypes, ExecutionOptions executionOptions)&#xD;&#xA;   at System.Data.Entity.Core.Objects.ObjectContext.&lt;&gt;c__DisplayClass47`1.&lt;ExecuteFunction&gt;b__46()&#xD;&#xA;   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)&#xD;&#xA;   at System.Data.Entity.Core.Objects.ObjectContext.&lt;&gt;c__DisplayClass47`1.&lt;ExecuteFunction&gt;b__45()&#xD;&#xA;   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)&#xD;&#xA;   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteFunction[TElement](String functionName, ExecutionOptions executionOptions, ObjectParameter[] parameters)&#xD;&#xA;   at CertifiedLabel.Models.CityViewEntities.SearchSignatures(Nullable`1 beginDate, Nullable`1 endDate) in C:\Projects VS 2015\CertifiedLabel\CertifiedLabel\Models\CertifiedLabel Model.Context.cs:line 46&#xD;&#xA;   at CertifiedLabel.Controllers.CertifiedLabelController.GetSignatureCityView() in C:\Projects VS 2015\CertifiedLabel\CertifiedLabel\Controllers\CertifiedLabelController.cs:line 220" time="2016-10-20T17:46:19.2307447Z">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CONNECTION:keep-alive&#xD;&#xA;HTTP_ACCEPT:text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip, deflate, sdch&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:en-US,en;q=0.8&#xD;&#xA;HTTP_HOST:localhost:8090&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safari/537.36&#xD;&#xA;HTTP_UPGRADE_INSECURE_REQUESTS:1&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Connection: keep-alive&#xD;&#xA;Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8&#xD;&#xA;Accept-Encoding: gzip, deflate, sdch&#xD;&#xA;Accept-Language: en-US,en;q=0.8&#xD;&#xA;Host: localhost:8090&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safari/537.36&#xD;&#xA;Upgrade-Insecure-Requests: 1&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="/LM/W3SVC/3/ROOT" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="C:\Projects VS 2015\CertifiedLabel\CertifiedLabel\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="*****" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="0" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="CGI/1.1" />
+    </item>
+    <item name="HTTPS">
+      <value string="off" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="3" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="/LM/W3SVC/3" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/api/CertifiedLabel" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="C:\Projects VS 2015\CertifiedLabel\CertifiedLabel\api\CertifiedLabel" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="Contact=Jose%20L%20Baday&amp;Company=MIDTOWN%20MIAMI%20INVESTMENTS%20LLC&amp;Address=800%20WEST%20AVE&amp;Address2=%20APT%20744&amp;City=Miami%20Beach&amp;State=FL&amp;Zip=33139&amp;ReferenceNumber=BB2012022155&amp;ReferenceID=25&amp;SenderContact=Building%20Department&amp;EnteredBy=Maria%20Mejia&amp;DepartmentName=Building&amp;ApplicationName=MiamiBiz&amp;SenderAddress=444%20SW%202%20Av&amp;SenderAddress2=&amp;SenderCity=Miami&amp;SenderState=FL&amp;SenderZip=33130" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="6921" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="GET" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/api/CertifiedLabel" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="8090" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="0" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="Microsoft-IIS/7.5" />
+    </item>
+    <item name="URL">
+      <value string="/api/CertifiedLabel" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="keep-alive" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip, deflate, sdch" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="en-US,en;q=0.8" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost:8090" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safari/537.36" />
+    </item>
+    <item name="HTTP_UPGRADE_INSECURE_REQUESTS">
+      <value string="1" />
+    </item>
+  </serverVariables>
+  <queryString>
+    <item name="Contact">
+      <value string="Jose L Baday" />
+    </item>
+    <item name="Company">
+      <value string="MIDTOWN MIAMI INVESTMENTS LLC" />
+    </item>
+    <item name="Address">
+      <value string="800 WEST AVE" />
+    </item>
+    <item name="Address2">
+      <value string=" APT 744" />
+    </item>
+    <item name="City">
+      <value string="Miami Beach" />
+    </item>
+    <item name="State">
+      <value string="FL" />
+    </item>
+    <item name="Zip">
+      <value string="33139" />
+    </item>
+    <item name="ReferenceNumber">
+      <value string="BB2012022155" />
+    </item>
+    <item name="ReferenceID">
+      <value string="25" />
+    </item>
+    <item name="SenderContact">
+      <value string="Building Department" />
+    </item>
+    <item name="EnteredBy">
+      <value string="Maria Mejia" />
+    </item>
+    <item name="DepartmentName">
+      <value string="Building" />
+    </item>
+    <item name="ApplicationName">
+      <value string="MiamiBiz" />
+    </item>
+    <item name="SenderAddress">
+      <value string="444 SW 2 Av" />
+    </item>
+    <item name="SenderAddress2">
+      <value string="" />
+    </item>
+    <item name="SenderCity">
+      <value string="Miami" />
+    </item>
+    <item name="SenderState">
+      <value string="FL" />
+    </item>
+    <item name="SenderZip">
+      <value string="33130" />
+    </item>
+  </queryString>
+</error>

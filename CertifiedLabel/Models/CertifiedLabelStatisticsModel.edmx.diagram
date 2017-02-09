@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="51a9ae66023c411ba7e32fcab24b16c5" Name="Diagram1" ZoomLevel="131">
+        <EntityTypeShape EntityType="CertifiedLabelModel.CertifiedLabel" Width="1.875" PointX="1.625" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CertifiedLabelModel.Department" Width="1.5" PointX="4.125" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CertifiedLabelModel.Label" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CertifiedLabelModel.Section" Width="1.5" PointX="4.125" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CertifiedLabelModel.sysdiagram" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="CertifiedLabelModel.FK_CertifiedLabel_Department" ManuallyRouted="false" />
+        <AssociationConnector Association="CertifiedLabelModel.FK_CertifiedLabel_Section" ManuallyRouted="false" />
+        <AssociationConnector Association="CertifiedLabelModel.FK_Section_Department" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
